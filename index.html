@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги веб-дизайна</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Мои услуги по веб-дизайну</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="services" data-aos="fade-up">
+            <h2>Услуги</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Дизайн лендингов</h3>
+                    <p>Создание уникальных и конверсионных лендингов.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Адаптивный дизайн</h3>
+                    <p>Отличное отображение на всех устройствах.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UX/UI Дизайн</h3>
+                    <p>Интуитивно понятные интерфейсы для вашего бизнеса.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" data-aos="fade-right">
+            <h2>Обо мне</h2>
+            <p>Привет! Меня зовут [Твоё имя], я профессиональный веб-дизайнер с более чем [X] годами опыта. Я помогаю клиентам выделиться в интернете и увеличить конверсии благодаря качественному дизайну.</p>
+        </section>
+        <section id="contact" data-aos="fade-left">
+            <h2>Контакты</h2>
+            <form action="https://formspree.io/f/example" method="POST">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Мои услуги по веб-дизайну. Все права защищены.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
